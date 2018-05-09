@@ -117,7 +117,7 @@ handle_client(Socket) ->
         {ok, _Data} -> %如果匹配这样的就发送一条安全协议给客户端
             % Xml 是Flash的socket连接服务器时要返回的一条协议
             Xml = "<cross-domain-policy><site-control permitted-cross-domain-policies=\"all\"/><allow-access-from domain=\"*\" to-ports=\"*\"/></cross-domain-policy> \0",
-            R = gen_tcp:send(Socket, Xml),
+            _R = gen_tcp:send(Socket, Xml),
             handle_client(Socket); 
         {error, closed} -> %如果匹配这样的就表示客户端关闭了连接  
 			catch gen_tcp:close(Socket),                      
