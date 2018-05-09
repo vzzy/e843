@@ -4,9 +4,9 @@
   {vsn, "1"},
   {registered, []},
   {applications, [
-                  kernel,
-                  stdlib
-                 ]},
+  	kernel,
+  	stdlib
+  ]},
   {mod, { e843_app, []}},
   {env, []}
  ]}.
